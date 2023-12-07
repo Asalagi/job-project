@@ -7,8 +7,8 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color: black;
-  /* background-image: linear-gradient(to right bottom, #000000, #181518, #25252b, #2d363f, #334950); */
+  /* background-color: black; */
+  background-image: linear-gradient(to right bottom, #000000, #040304, #080608, #0c090c, #0e0c10, #131117, #16151d, #171923, #1a1f2e, #1d263a, #1d2d46, #1c3453);
 }
 
 /*font CSS */
