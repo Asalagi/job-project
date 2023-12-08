@@ -8,12 +8,12 @@ function App() {
       <div className="container">
         <div className="main-content">
           <div className="text-content">
-            <h2 className="center">Hello</h2>
+            <h2 className="center">May the work force be with you!</h2>
           </div>
         </div>
       </div>
       <div className="bottom-content">
-        <p className="bottom">* Powered by The Galaxy Far Far Away *</p>
+        <p className="bottom">* Powered by a Galaxy Far Far Away *</p>
       </div>
     </div>
   );
