@@ -9,6 +9,7 @@ function App() {
         <div className="main-content">
           <div className="text-content">
             <h2 className="center">May the work force be with you!</h2>
+            <div className="signup-container">
             <div className="signup-box">
               <h3>Sign Up</h3>
                <div className="signup-inner">
@@ -25,6 +26,7 @@ function App() {
                </div>
             </div>
           </div>
+         </div>
         </div>
       </div>
       <div className="bottom-content">
