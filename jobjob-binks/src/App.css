@@ -69,3 +69,26 @@ p {
   align-items: center;
   justify-content: center;
 }
+
+.signup-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0px solid black;
+
+}
+.signup-inner {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  border: 1px solid black;
+}
+.signup-label {
+  width: 30%;
+  border: 0px solid black;
+}
+.signup-input {
+  width: 70%;
+  border: 0px solid black;
+}
