@@ -13,17 +13,17 @@ function App() {
             <div className="signup-box">
               <h3>Sign Up</h3>
                <div className="signup-inner">
-                <div className="signup-label">
-                <label>Name</label><br/>
-                <label>Email</label><br/>
-                <label>Password</label><br/>
+                <div className="signup-label"><label>Name</label><br/></div>
+                <div className="signup-input"><input/></div>
                 </div>
-                <div className="signup-input">
-                <input></input><br/>
-                <input></input><br/>
-                <input></input><br/>
+                <div className="signup-inner">
+                <div className="signup-label"><label>Eamil</label><br/></div>
+                <div className="signup-input"><input/></div>
                 </div>
-               </div>
+                <div className="signup-inner">
+                <div className="signup-label"><label>Password</label><br/></div>
+                <div className="signup-input"><input/></div>
+                </div>
             </div>
           </div>
          </div>
