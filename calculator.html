@@ -2,37 +2,51 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Calculator</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./calculator.css">
     </head>
     <body>
-        <div class="calculator">
-            <div class="display display-font">0</div>
-            <div class="buttons span-2 btn-font">Clear</div>
-            <div class="buttons btn-font">+/-</div>
-            <div class="buttons btn-font">÷</div>
+        <div class="calculator" id="calcu">
+            <div class="display display-font" id="result" value="0">0</div>
+            <button class="buttons span-3 btn-font non-nums" value="c" onclick="clear()">Clear</button>
+            <button class="buttons btn-font operators" value="/" onclick="display('÷')"
+                    onkeydown="myFunction(event)">÷</button>
 
-            <div class="buttons btn-font">7</div>
-            <div class="buttons btn-font">8</div>
-            <div class="buttons btn-font">9</div>
-            <div class="buttons btn-font">×</div>
+            <button class="buttons btn-font numbers" value="7" onclick="display('7')"
+                    onclick="myFunction(event)">7</button>
+            <button class="buttons btn-font numbers" value="8" onclick="display('8')"
+                    onkeydown="myFunction(event)">8</button>
+            <button class="buttons btn-font numbers" value="9" onclick="display('9')"
+                    onkeydown="myFunction(event)">9</button>
+            <button class="buttons btn-font operators" value="*" onclick="display('×')"
+                    onkeydown="myFunction(event)">×</button>
 
-            <div class="buttons btn-font">4</div>
-            <div class="buttons btn-font">5</div>
-            <div class="buttons btn-font">6</div>
-            <div class="buttons btn-font">-</div>
+            <button class="buttons btn-font numbers" value="4" onclick="display('4')"
+                    onkeydown="myFunction(event)">4</button>
+            <button class="buttons btn-font numbers" value="5" onclick="display('5')"
+                    onkeydown="myFunction(event)">5</button>
+            <button class="buttons btn-font numbers" value="6" onclick="display('6')"
+                    onkeydown="myFunction(event)">6</button>
+            <button class="buttons btn-font operators" value="-" onclick="display('-')"
+                    onkeydown="myFunction(event)">-</button>
 
-            <div class="buttons btn-font">1</div>
-            <div class="buttons btn-font">2</div>
-            <div class="buttons btn-font">3</div>
-            <div class="buttons btn-font">+</div>
+            <button class="buttons btn-font numbers" value="1" onclick="display('1')"
+                    onkeydown="myFunction(event)">1</button>
+            <button class="buttons btn-font numbers" value="2" onclick="display('2')"
+                    onkeydown="myFunction(event)">2</button>
+            <button class="buttons btn-font numbers" value="3" onclick="display('3')"
+                    onkeydown="myFunction(event)">3</button>
+            <button class="buttons btn-font operators" value="+" onclick="display('+')"
+                    onkeydown="myFunction(event)">+</button>
 
-            <div class="buttons span-2 btn-font">0</div>
-            <div class="buttons btn-font">.</div>
-            <div class="buttons btn-font">=</div>
+            <button class="buttons span-2 btn-font numbers" value="0" onclick="display('0')"
+                    onkeydown="myFunction(event)">0</button>
+            <button class="buttons btn-font numbers" value="." onclick="display('.')"
+                    onkeydown="myFunction(event)">.</button>
+            <button class="buttons btn-font non-nums" id="result">=</button>
         </div>
-        <script src="./calculator.jsx"></script>
+        <script src="./calculator.js"></script>
     </body>
 </html>
