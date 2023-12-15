@@ -14,25 +14,31 @@ html {
 
 .calculator {
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
     background-color: white;
-    border-radius: 2em;
     border: 1px solid black;
     width: 40vw;
     height: 75vh;   
 }
 
 .display {
-    width: 90%;
-    height: 10%;
-    background-image: -webkit-linear-gradient(100deg, black 100%, #4CB9E7 0%);
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
-    padding: 5%;
-    color: white;
+    background-color: black;
+    grid-column: span 4;
 }
 
 .buttons{
-    display:grid;
-    grid-template-columns: repeat(4,1fr);
-    border: 1px solid black;
+    display: flex;
+    background-image: -webkit-linear-gradient(100deg, black 100%, #4CB9E7 0%);
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    color: white;
+}
+
+.span-3 {
+    grid-column: span 3;
+}
+
+.span-2 {
+    grid-column: span 2;
 }
