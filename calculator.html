@@ -6,12 +6,25 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./calculator.css">
+        <script src= 
+        "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+                integrity= 
+        "sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer"></script> 
+            <script src= 
+        "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+                integrity= 
+        "sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer"></script> 
+                <script src="./calculator.js"></script>
     </head>
     <body>
         <div class="calculator" id="calcu">
-            <div class="display display-font" id="result" value="0">0</div>
-            <button class="buttons span-3 btn-font non-nums" value="c" onclick="clear()">Clear</button>
-            <button class="buttons btn-font operators" value="/" onclick="display('÷')"
+            <input class="display display-font" id="result" value=""></input>
+            <button class="buttons span-3 btn-font non-nums" value="c" onclick="clr()">Clear</button>
+            <button class="buttons btn-font operators" value="/" onclick="display('/')"
                     onkeydown="myFunction(event)">÷</button>
 
             <button class="buttons btn-font numbers" value="7" onclick="display('7')"
@@ -20,7 +33,7 @@
                     onkeydown="myFunction(event)">8</button>
             <button class="buttons btn-font numbers" value="9" onclick="display('9')"
                     onkeydown="myFunction(event)">9</button>
-            <button class="buttons btn-font operators" value="*" onclick="display('×')"
+            <button class="buttons btn-font operators" value="*" onclick="display('*')"
                     onkeydown="myFunction(event)">×</button>
 
             <button class="buttons btn-font numbers" value="4" onclick="display('4')"
@@ -45,8 +58,7 @@
                     onkeydown="myFunction(event)">0</button>
             <button class="buttons btn-font numbers" value="." onclick="display('.')"
                     onkeydown="myFunction(event)">.</button>
-            <button class="buttons btn-font non-nums" id="result">=</button>
+            <button class="buttons btn-font non-nums" value="=" onclick="solve()">=</button>
         </div>
-        <script src="./calculator.js"></script>
     </body>
 </html>
