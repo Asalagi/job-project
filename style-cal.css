@@ -1,0 +1,63 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #3887BE, #5D3587);
+    color: white;
+}
+
+.cal-grid-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+button {
+    font-size: 2rem;
+    border: 1px solid black;
+    outline: none;
+    background-color: #45474B;
+    color: white;
+} 
+
+button:hover {
+    background-color: lightgrey;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.top {
+    background-color: grey;
+    color: black;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.previous {
+    color: lightgrey;
+    font-size: 1.5rem;
+}
+
+.current {
+    color: white;
+    font-size: 2.5rem;
+}
+
