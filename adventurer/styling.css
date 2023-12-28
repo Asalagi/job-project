@@ -1,0 +1,42 @@
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: #90B77D;
+    color: #473C33;
+}
+
+.title {
+    font-family: Nature Impact Demo, sans-serif;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    background-color: #D2E3C8;
+    border: 1px solid #473C33;
+    width: 50vw;
+    height: 50vh;
+}
+
+.display-container {
+    border: 0px solid black;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    border: 0px solid black;
+}
+
+.start {
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid #263A29;
+    background-color: #41644A;
+    color: #F6F6F6;
+}
