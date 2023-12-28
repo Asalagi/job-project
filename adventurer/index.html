@@ -7,24 +7,36 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styling.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
         <h1 class="title">Adventurer</h1>
         <div class="container-main">
-            <div class="display-container"><p>Welcome Adventurer!</p>
+            <div id="display" class="display-container"><p>Welcome Adventurer!</p>
                 <p>Are you ready for a fun adventure today? There are a few things I 
                 should mention before you start. Sometimes there are forks in the road
                 make sure you remember which way you are going so you don't get lost. 
                 Make sure you stay aware of your surrounds and watch out for bears, 
                 cougars and snakes. There have been some rumors about treasures and 
                 valuable items have been found.</p>
-                <p>Happy trailing feloow Adventurer!</p>
+                <p>Happy trailing fellow Adventurer!</p>
             </div>
             <div class="btn-container">
-               <button class="start center">Go Adventuring!</button>
+               <button id="start" class="btn center">Go Adventuring!</button>
+               <button id="hike" class="btn center hidden">Keep Walking</button>
+
+               <button id="left" class="btn center hidden">Go Left</button>
+               <button id="right" class="btn center hidden">Keep Right</button>
+
+               <button id="fight" class="btn center hidden">Fight!</button>
+               <button id="run" class="btn center hidden">RUUUN!</button>
+
+               <button id="picture" class="btn center hidden">Take a Picture</button>
+               <button id="shoot" class="btn center hidden">Take a Shot</button>
+
+               <button id="help" class="btn center hidden">Call for Help</button>
+               <button id="home" class="btn center hidden">Go Home</button>
             </div>           
         </div>
-
-        <script src="script.js" async defer></script>
     </body>
 </html>
