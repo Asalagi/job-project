@@ -124,6 +124,7 @@ hack.addEventListener('click', function(){
         shoot.classList.add('hidden');
    }
 });
+// ^ change turn around to go back message for turn around in this scenerio does not fit.
 
 restart.addEventListener('click', function(){
     location.reload();
