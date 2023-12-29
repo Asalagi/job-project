@@ -6,6 +6,12 @@ let left = document.getElementById('left');
 let right = document.getElementById('right');
 let ignore = document.getElementById('ignore');
 let investigate = document.getElementById('investigate');
+let restart = document.getElementById('restart');
+let turn = document.getElementById('turn');
+let hack = document.getElementById('hack');
+let picture = document.getElementById('picture');
+let shoot = document.getElementById('shoot');
+let innerDisplay = document.getElementById('inDisplay');
 
 let phrases = [
     "You keep walking down the trail. The sun is shining and the birds are happily chirping.", 
@@ -20,6 +26,9 @@ start.addEventListener('click', function () {
 });
 
 hike.addEventListener('click', function() {
+    picture.classList.add('hidden');
+    shoot.classList.add('hidden');
+    turn.classList.add('hidden');
     let odds = Math.trunc(Math.random() * 50) + 1;
     if (odds % 7 === 0){
         display.innerText = "You have come to a fork in the road. Choose your path."
@@ -31,7 +40,12 @@ hike.addEventListener('click', function() {
         ignore.classList.remove('hidden');
         investigate.classList.remove('hidden');
         hike.classList.add('hidden');
-     } else {
+     } else if (odds % 10 === 0){
+        display.innerText = "You're trail is becoming narrow. You notice the bushes and trees are getting thicker in front of you. Oh no! It looks like you have come to a deadend. What would you like to do."
+        hike.classList.add('hidden');
+        turn.classList.remove('hidden');
+        hack.classList.remove('hidden');
+    } else {
         hike.classList.remove('hidden');
         display.innerText = phrases[Math.trunc(Math.random() * phrases.length)];
     }
@@ -64,8 +78,56 @@ investigate.addEventListener('click', function() {
     hike.classList.add('hidden');
     ignore.classList.add('hidden');
     investigate.classList.add('hidden');
-    btnDisplay.innerText = "GAME OVER!"
+    restart.classList.remove('hidden');
+    innerDisplay.innerText = "GAME OVER!";
 });
+
+turn.addEventListener('click', function(){
+    display.innerText = "You decided to turn around and not to risk hacking throught he bushes into the unknown. You continue to happily walk back down the trail."
+    hike.classList.remove('hidden');
+    turn.classList.add('hidden');
+    hack.classList.add('hidden');
+    picture.classList.add('hidden');
+    shoot.classList.add('hidden');
+});
+
+hack.addEventListener('click', function(){
+    let animals = [
+        "deer",
+        "elk",
+        "turkeys",
+        "small children playing in a field"
+    ];
+    let hackPhrases = [
+        "You've hacked through the bushes and there are just more bushes. You should turn around.",
+        `You have been hacked through the bushes and you see a small clearing. You keep at it and step thorugh and see a beautiful valley. In the distance you see ${animals[Math.trunc(Math.random() * animals.length)]}. You approach slowly. What beautiful creatures! What would you like to do?`,
+        "You hack through the bushes and step through. Oh there's the trail. Looks like it was just the back side of the trail.",
+    ];
+    display.innerHTML = `${hackPhrases[Math.trunc(Math.random() * hackPhrases.length)]}`;
+    if (display.innerHTML === hackPhrases[1]) {
+        picture.classList.remove('hidden');
+        shoot.classList.remove('hidden');
+        hike.classList.remove('hidden');
+        turn.classList.remove('hidden');
+        hack.classList.add('hidden');
+    } else if (display.innerHTML === hackPhrases[0]){
+        hike.classList.add('hidden');
+        turn.classList.remove('hidden');
+        hack.classList.add('hidden');
+        picture.classList.add('hidden');
+        shoot.classList.add('hidden');
+   } else {
+        hike.classList.remove('hidden');
+        turn.classList.add('hidden');
+        hack.classList.add('hidden');
+        picture.classList.add('hidden');
+        shoot.classList.add('hidden');
+   }
+});
+
+restart.addEventListener('click', function(){
+    location.reload();
+})
 
 /* if 'start' is clicked remove 'start' display 'hike' 
 when 'hike' is clicked randomize
