@@ -207,19 +207,20 @@ picture.addEventListener('click', function() {
     shoot.classList.add('hidden');
 });
 
-// shoot.addEventListener('click', function() {
-//     let shootOdds = [
-//         "Oh look at those tasty creatures. Your trigger finger is getting mighty itchy. You quietly set yourself up, point, focus and pull the trigger. BANG! Gosh dang it you missed! Do you go home feeling defeated or keep walking in hopes to find something else along your hike?",
-//         "Oh look at those tasty creatures. Your trigger finger is getting mighty itchy. You quietly set yourself up, point, focus and pull the trigger. BANG! Hit! You are overjoyed with your "
-//     ]
-//     display.innerText = `${}`
-//     hike.classList.remove('hidden');
-//     back.classList.add('hidden');
-//     turn.classList.add('hidden');
-//     hack.classList.add('hidden');
-//     picture.classList.add('hidden');
-//     shoot.classList.add('hidden');
-// });
+shoot.addEventListener('click', function() {
+    let shootOdds = [
+        "Oh look at those tasty creatures. Your trigger finger is getting mighty itchy. You quietly set yourself up, point, focus and pull the trigger. BANG! Gosh dang it you missed! Do you go home feeling defeated or keep walking in hopes to find something else along your hike?",
+        "Oh look at those tasty creatures. Your trigger finger is getting mighty itchy. You quietly set yourself up, point, focus and pull the trigger. BANG! Hit! You are overjoyed with your prize. You load up your kill. Do you end your day on a good note and go home or do you continue hiking on."
+    ]
+    display.innerText = `${shootOdds[Math.trunc(Math.random() * shootOdds.length)]}`;
+    hike.classList.remove('hidden');
+    home.classList.remove('hidden');
+    back.classList.add('hidden');
+    turn.classList.add('hidden');
+    hack.classList.add('hidden');
+    picture.classList.add('hidden');
+    shoot.classList.add('hidden');
+});
 
 home.addEventListener('click', function() {
     display.innerText = "You have successfully made it home alive!";
@@ -231,7 +232,3 @@ home.addEventListener('click', function() {
 restart.addEventListener('click', function(){
     location.reload();
 })
-
-/* if 'start' is clicked remove 'start' display 'hike' 
-when 'hike' is clicked randomize
-*/

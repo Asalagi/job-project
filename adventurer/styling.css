@@ -29,6 +29,7 @@ html {
 }
 .inner-display {
     text-align: center;
+    padding: 1%;
     font-weight: bold;
     border: 0px solid black;
 }
