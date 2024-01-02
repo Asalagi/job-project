@@ -228,7 +228,9 @@ home.addEventListener('click', function() {
     restart.classList.remove('hidden');
     hike.classList.add('hidden');
     home.classList.add('hidden');
-})
+});
+
 restart.addEventListener('click', function(){
     location.reload();
-})
+});
+
